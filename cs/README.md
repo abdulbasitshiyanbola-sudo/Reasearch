@@ -21,6 +21,32 @@ without the paper at all**.
 | `task-template.md` | Copy this per task; fill in every field. |
 | `quality-checklist.md` | Run through this before submission (DOs/DON'Ts + pass-rate gates). |
 | `examples/example-bloom-filter-fpp.md` | Illustrative format demo (NOT for submission). |
+| `verify/verify_tasks.py` | Re-derives every task's golden answer and asserts it matches. |
+| `verify/requirements.txt` | Dependency for the verifier (`mpmath`). |
+
+## Drafted tasks
+
+| Task | Subdomain | Source (license) | Golden answer |
+| --- | --- | --- | --- |
+| `tasks/cuckoo-3core-fraction-at-threshold.md` | Algorithms & Data Structures (hashing) | Walzer, ICALP 2018, LIPIcs (CC BY) | `0.9208` |
+| `tasks/hyperloglog-bias-constant-m3.md` | Randomized & Streaming Algorithms | Flajolet et al., AofA 2007, DMTCS (CC BY 4.0) | `0.4714` |
+
+> Each task is a **trainer draft**: the trainer must run the novelty check, calibrate
+> pass-rates on the Eval Platform, and own/finalize authorship per §1.6.3 before submission.
+
+## Verifying the golden answers
+
+The numeric golden answers are machine-checkable. From the repo root:
+
+```bash
+pip install -r cs/verify/requirements.txt
+python3 cs/verify/verify_tasks.py
+```
+
+The script independently re-derives each answer (cuckoo 3-core fraction and its (3,1)
+fallback, the HyperLogLog bias constant, and the Bloom-filter demo) and asserts agreement,
+including external sanity checks (e.g. the published (3,2) cuckoo load threshold and the
+HyperLogLog deployed constants `0.673 / 0.697 / 0.709`).
 
 ## Authoring workflow (CS)
 
