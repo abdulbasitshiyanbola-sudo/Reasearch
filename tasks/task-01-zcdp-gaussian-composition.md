@@ -1,3 +1,10 @@
+> **SUPERSEDED — failed difficulty validation.** On the Eval Platform this task passed
+> Run I 16/16, Run II 16/16, Run III 15/16, i.e. it is trivially solvable *without* the
+> paper (the zCDP/Gaussian composition machinery is standard knowledge for the model).
+> It violates the passrate requirement (Run I must be ≤ 12.5%). The replacement task is
+> `task-02-water-wheel-spanning-trees.md`, which hinges on a specialized, freshly published
+> closed-form result that cannot be derived or recalled without the source paper.
+
 # Paper-Assisted STEM Task — CS Domain
 
 A single, ready-to-submit task built according to the *Paper-Assisted STEM Problems — Trainer Guidelines* (Part 2: Task Creation), using the **Traditional Workflow** (identify a paper with a non-trivial result, then formulate a problem that requires that result without merely reproducing it).
