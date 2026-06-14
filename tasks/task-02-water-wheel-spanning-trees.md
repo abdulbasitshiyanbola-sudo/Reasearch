@@ -1,3 +1,11 @@
+> **SUPERSEDED — failed difficulty validation.** On the Eval Platform the model passed all
+> runs (including paper-free Run I). The spanning-tree count, though intricate, has a
+> *derivable* closed form (the ring of gadgets reduces to a Chebyshev/linear recurrence the
+> model can find), so it is solvable without the paper. Replacement:
+> `task-03-triangular-grid-independent-sets.md`, whose answer is a **non-derivable exact
+> enumeration value** (no closed form; requires a transfer-matrix computation infeasible by
+> hand and not memorizable).
+
 # Paper-Assisted STEM Task — CS Domain (v2)
 
 A ready-to-submit task built per the *Paper-Assisted STEM Problems — Trainer Guidelines*
